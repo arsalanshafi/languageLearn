@@ -1,0 +1,32 @@
+
+
+body{
+    background-color: rgb(173, 162, 162);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+
+.input{
+    width: 300px;
+    height: 30px;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0 0 10px;
+    padding-inline:50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn{
+    width: 60px;
+    height: 35px;
+    font-style: bold;
+    background-color: yellow;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 0 0 10px;
+}
