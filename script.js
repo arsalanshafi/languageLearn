@@ -1,22 +1,39 @@
 
 const database = {
-    "javascript": ["library","jsdoc"]
+    "javascript": ["library","jsdoc","mdn"],
+    "java"      : ["java","docs"]
 }
 
 const content = document.querySelector(".content");
+const input = document.querySelector(".input");
+const btn = document.querySelector(".btn");
 
+const addCard = (arg) => {
+    content.innerHTML = "";
 
-const addCard = () => {
-    for (i of database.javascript) {
+    for (i of database[arg]) {
 
         const newEle = document.createElement("a");
         newEle.setAttribute("href", "www.google.com");
-        newEle.innerHTML = "<div class='card'>The modern javascript tutorial</div>"
+        newEle.innerHTML = `<div class='card'>${i}</div>`
 
         content.appendChild(newEle);
-        console.log(i);
     }
 }
 
 
-addCard();
+const check = (arg) => {
+    for(i in database){
+        console.log(i,arg)
+        if(i === arg) addCard(arg);
+    }
+}
+
+btn.addEventListener("click",()=>{
+    check(input.value);
+    // console.log(input.value);
+})
+
+
+
+

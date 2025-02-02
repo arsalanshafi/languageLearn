@@ -70,8 +70,21 @@ a:visited,a:link{
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 0 10px;
+    animation: slideup 1s ease-in;
 }
 
 .card:hover{
     box-shadow: 0 0 20px;
+}
+
+@keyframes slideup{
+
+    from{
+        transform : translateY(10px);
+        opacity: 0;
+    }
+    to{
+        transform : translateY(0px);
+        opacity: full;
+    }
 }
