@@ -20,6 +20,7 @@ const container = document.querySelector(".container");
 const content = document.querySelector(".content");
 const input = document.querySelector(".input");
 const btn = document.querySelector(".btn");
+const msg = document.querySelector(".blw");
 
 
 const addCard = (arg) => {
@@ -39,15 +40,11 @@ const addCard = (arg) => {
 }
 
 const dismessage = ()=>{
-    const msg = document.createElement("p");
-    msg.setAttribute("class","msg");
     msg.innerHTML = "language not found";
-    container.appendChild(msg);
 }
 
 const remmessage = ()=>{
-    let ele = container.lastElementChild
-    ele.remove()
+    msg.innerHTML = "";
 }
 
 
