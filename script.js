@@ -16,9 +16,11 @@ const databaseLinks = {
     "c"         : ["https://www.programiz.com/c-programming","https://www.w3schools.com/c/","https://www.tutorialspoint.com/cprogramming/index.htm","https://learn-c.org/","https://www.geeksforgeeks.org/c-programming-language/","https://www.cprogramming.com/tutorial/c-tutorial.html"]
 }
 
+const container = document.querySelector(".container");
 const content = document.querySelector(".content");
 const input = document.querySelector(".input");
 const btn = document.querySelector(".btn");
+
 
 const addCard = (arg) => {
     content.innerHTML = "";
@@ -36,16 +38,34 @@ const addCard = (arg) => {
     }
 }
 
+const dismessage = ()=>{
+    const msg = document.createElement("p");
+    msg.setAttribute("class","msg");
+    msg.innerHTML = "language not found";
+    container.appendChild(msg);
+}
+
+const remmessage = ()=>{
+    let ele = container.lastElementChild
+    ele.remove()
+}
+
 
 const check = (arg) => {
+    let flag = 0;
     for(i in databaseNames){
         console.log(i,arg)
-        if(i === arg) addCard(arg);
+        if(i === arg){
+            addCard(arg);
+            remmessage();
+            flag = 1;
+        } 
     }
+    if(!flag) dismessage();
 }
 
 btn.addEventListener("click",()=>{
-    check(input.value);
+    check(input.value.toLowerCase());
     // console.log(input.value);
 })
 

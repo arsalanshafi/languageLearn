@@ -21,7 +21,10 @@ body{
 .msg{
     font-family: sans-serif;
     font-size: 15px;
-    color: yellow;
+    color: blue;
+}
+.hide{
+    display:none
 }
 
 .input{
