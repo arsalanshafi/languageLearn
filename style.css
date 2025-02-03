@@ -91,3 +91,14 @@ a:visited,a:link{
         opacity: full;
     }
 }
+
+
+@media (max-width:500px) {
+    .input{
+        width: 250px;
+    }
+    .btn{
+        width:30px;
+        font-size: 5px;
+    }
+}
